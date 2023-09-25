@@ -1,11 +1,10 @@
-
-import { createStore } from 'zustand/vanilla'
+import { createStore } from "zustand/vanilla";
 
 const store = createStore(() => ({
   bears: 0,
-  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  removeAllBears: () => set({ bears: 0 }),
-}))
-const { getState, setState, subscribe } = store
+  increasePopulation: () => setState((state) => ({ bears: state.bears + 1 })),
+  removeAllBears: () => setState({ bears: 0 }),
+}));
+const { getState, setState, subscribe } = store;
 
-export default store
+export default store;

@@ -25,9 +25,11 @@ document.querySelector('#app').innerHTML = `
 
 setupCounter(document.querySelector('#counter'))
 
-var theState = store.getState()
-console.log('theState', theState)
 
-theState.increasePopulation()
+console.log('theState', store.getState())
 
-console.log('theState', theState)
+store.getState().increasePopulation()
+
+console.log('theState', store.getState())
+
+console.log('store.bears', store.getState().bears)
